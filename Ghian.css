@@ -1,0 +1,236 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #2d3e3b, #557a7a, #f1d0a3);
+    background-size: 600% 600%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navigation{
+    width: 90%;
+    height: 90%;
+    background-color: rgba(99, 14, 179, 0.226);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px 1px #8e38de;
+    padding: 2% 0;
+}
+
+/* Container for Content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    text-align: center;
+    max-height: 100vh;
+}
+
+/* Profile Picture */
+.profile-pic-container {
+    margin-left: 100px;
+    animation: popIn 0.8s ease-out;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: scaleIn 1s ease-out;
+}
+
+/* Bio Section */
+.bio {
+    max-width: 60%;
+}
+
+.bio h1 {
+    font-size: 4rem;
+    color: #2d3e3b;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.bio p {
+    font-size: 1.4rem;
+    margin: 15px 0;
+    animation: fadeInLeft 1.4s ease-out;
+}
+
+/* Hobbies Section */
+.hobbies {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #557a7a;
+    color: #2d3e3b;
+}
+
+.hobbies-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hobby-item {
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+}
+
+/* Goals Section */
+.goals {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #557a7a;
+    color: #fff;
+}
+
+.goals-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #557a7a;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: #2d3e3b;
+}
+
+.goal-item {
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+    color: #fff;
+}
+
+/* Animated Text Section */
+.animated-text {
+    animation: colorChange 5s ease infinite;
+    font-size: 1.6rem;
+}
+
+/* Contact Info Section */
+.contact-info {
+    background-color: #2d3e3b;
+    color: #fff;
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    animation: zoomIn 1.5s ease-out;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #f1d0a3;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #f1d0a3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #c6d8d4;
+}
+
+/* Footer Section */
+footer {
+    background-color: #2d3e3b;
+    color: #f4f4f9;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1.8s ease-out;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Animation for Gradient Background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Color change animation for text */
+@keyframes colorChange {
+    0% { color: #fff; }
+    25% { color: #f1d0a3; }
+    50% { color: #557a7a; }
+    75% { color: #2d3e3b; }
+    100% { color: #fff; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact-info {
+        width: 90%;
+    }
+}
