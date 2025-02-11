@@ -1,0 +1,125 @@
+*{
+
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation{
+    position: fixed;
+    height: 70px;
+    right: 0;
+    left: 0;
+    background-color: rgb(16, 30, 63);
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+    -moz-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+    box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+  }
+  
+  .navigation h1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    font-family: Arial;
+    color: #1100ff;
+    background-image: -webkit-linear-gradient(
+        0deg, 
+        #4d40ff 0%, 
+        #466e85 46%, 
+        #ff0055 86%
+        );
+        background-clip: text;
+        -webkit-background-clip:text;
+        text-emphasis-color: transparent;
+        -webkit-text-fill-color:transparent;
+  }
+  
+  ul{
+    position: absolute;
+    height: 70px;
+    right: 50px;
+  }
+  
+  li{
+    display: inline-block;
+    margin-left: 25px;
+    width: 80px;
+    padding-top: 25px;
+    font-weight: bold;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  a{
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  a:hover{
+    color: rgb(224, 62, 62); 
+  }
+  
+  /* Home Section */
+  
+  .text {
+    font-family: Arial;
+    text-align: center; /* Center the text within its block */
+    color: black;
+    font-size: 3em;
+    font-weight: 900;
+    width: 100%; /* Set width to full for centering */
+    height: 100vh; /* Full height for centering vertically */
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .content {
+    background-image: url('img/bg.jpg'); /* Add your image path here */
+    background-size: cover; /* Ensure the image covers the entire section */
+    height: 100vh; /*how big image is*/
+    background-position: center; /* Center the image */
+    padding: 70px 0; /* Adjust padding to give space after navigation bar */
+  }
+  
+  /* Members Section */
+  .section-title {
+  text-align: center; /* Centers text horizontally */
+  margin-top: 50px;
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column; /* Ensures items stack vertically */
+  }
+  
+  .section-title h2 {
+  font-size: 36px;
+  color: #000000;
+  }
+  
+  .container {
+  margin: 40px auto;
+  width: 90%; /* Adjust width for responsive layout */
+  display: flex;
+  justify-content: center; /* Center the content */
+  gap: 40px;
+  flex-wrap: wrap; /* Wrap items if needed */
+  }
+  
+  .container img {
+  width: 150px; /* Set consistent width */
+  height: 150px; /* Set consistent height */
+  object-fit: cover; /* Ensure images fit within their bounds */
+  border-radius: 20px; /* Add rounded corners */
+  border: 2px solid rgba(0, 0, 0, 0.684);
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+  }
+  
+  .container img:hover {
+  transform: scale(1.2); /* Scale on hover */
+  }
